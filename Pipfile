@@ -9,6 +9,8 @@ name = "pypi"
 
 slackclient = "*"
 "beautifulsoup4" = "*"
+requests = "*"
+"urllib3" = "*"
 
 
 [dev-packages]
