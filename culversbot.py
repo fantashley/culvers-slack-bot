@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-import os
 import requests
 from slackclient import SlackClient
 
@@ -27,4 +26,3 @@ class CulversSlackBot:
             sc.rtm_send_message(self.channel, message)
         else:
             raise Exception("Connection to Slack API failed")
-
