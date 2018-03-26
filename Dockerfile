@@ -2,7 +2,7 @@ FROM python:3
 
 WORKDIR /usr/src/app
 
-COPY Pipfile Pipfile.lock culversbot.py app.py ./
+COPY app/ ./
 
 RUN pip install pipenv && pipenv install
 
