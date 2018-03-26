@@ -28,13 +28,3 @@ class CulversSlackBot:
         else:
             raise Exception("Connection to Slack API failed")
 
-
-def main():
-    slack_token = os.environ['SLACK_API_TOKEN']
-    bot = CulversSlackBot(slack_token, "culvers", "golden-valley-mn-7th-ave")
-    bot.send_fotd()
-    exit(0)
-
-
-if __name__ == "__main__":
-    main()
