@@ -18,3 +18,8 @@ slack_token = os.environ['SLACK_API_TOKEN']
 bot = CulversSlackBot(slack_token, "culvers", "golden-valley-mn-7th-ave")
 bot.send_fotd()
 ```
+### Docker Example
+```
+docker build -t culversbot .
+docker run --rm -e "CULVERS_LOCATION=golden-valley-mn-7th-ave" -e "SLACK_CHANNEL=culvers" -e "SLACK_API_TOKEN=xoxb-YOUR-KEY-HERE" culversbot
+```
