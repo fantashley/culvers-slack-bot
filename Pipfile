@@ -8,9 +8,9 @@ name = "pypi"
 [packages]
 
 slackclient = "*"
-"beautifulsoup4" = "*"
-requests = "*"
-"urllib3" = "*"
+beautifulsoup4 = "*"
+requests = ">=2.20.0"
+urllib3 = ">=1.23"
 
 
 [dev-packages]
