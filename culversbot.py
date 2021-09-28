@@ -14,7 +14,8 @@ class CulversSlackBot:
 
     @staticmethod
     def get_fotd(location):
-        response = requests.get(CulversSlackBot.CULVERS_URL + location)
+        headers={'User-Agent': 'culvers-slack-bot'}
+        response = requests.get(CulversSlackBot.CULVERS_URL + location, headers=headers)
         soup = BeautifulSoup(response.content, "html.parser")
         fotd = soup.find(class_="ModuleRestaurantDetail-fotd").h2.strong.string
         return fotd
